@@ -1,0 +1,21 @@
+.title-container {
+    background-color: darkorange;
+    padding: 150px;
+}
+
+.title-section {
+    margin: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: left;
+}
+
+.about-container {
+    height: 566px;
+    padding: 100px;
+    background-color: bisque;
+}
+
+.about-section {
+    margin: 150px;
+    padding: 100px;
+}

@@ -1,0 +1,317 @@
+/* Main Structure */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    color: #121212;
+}
+
+
+/* Style the header */
+.header {
+    background-image: url(assets/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px;
+    text-align: center;
+    height: 420px;
+    max-height: 500%;
+    color: #fdfdfd;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    display: block;
+    margin-top: auto;
+    margin-left: -130px;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgb(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.header {
+
+}
+
+.header h1 {
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size: 26pt;
+
+}
+
+.header p {
+    font-weight: 300;
+    font-size: 14pt;
+    margin-top: -26px;
+}
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #121212;
+
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: right;
+    display: block;
+    color: #169233;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 5px 5px;
+    font-weight: bolder;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    transition-duration: 0.5s;
+    font-weight: bolder;
+    background-color: #169233;
+    color: #fdfdfd;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 20%;
+}
+
+
+
+/* Middle column */
+.column.middle {
+    background-color: #f1f1f1;
+    width: 60%;
+    max-height: 50%;
+}
+
+.column.middle p {
+    line-height: 1.4;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+.column.middle h2 {
+    margin-bottom: -10px;
+    font-weight: bolder;
+    color: #169233;
+    outline: 200 #121212;
+}
+
+/* Image Container */
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#gallery2 {
+    float: right;
+}
+
+.gallery:hover {
+    transition-duration: 0.5s;
+    background: #169233;
+    color: #fdfdfd;
+    
+}
+.gallery img:hover {
+    transition-duration: 0.5s;
+    filter:  blur(1px) brightness(80%);
+}
+
+.gallery img {
+    width: 100%;
+    height: 175px;
+    margin-bottom: 10px;
+}
+
+.desc {
+
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+    font-size: 15x;
+}
+
+/* Left Side Content */
+
+
+/* Right Side Content */
+.profiles {
+    text-align: center; 
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    color: #121212;
+}
+
+.profiles img {
+    border-radius: 50%;
+    border: 10px solid #121212;
+    margin-bottom: -20px;
+
+}
+
+.profiles p {
+    margin-top: -15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+    color: gray;
+}
+
+.profiles h3 {
+    margin-top: 30px;
+    color: #121212;
+}
+
+#lists {
+    font-size: 8pt;
+    text-align: left;
+    font-weight: bolder;
+    color: #169233;
+}
+
+#lists:hover {
+    font-weight: bolder;
+    color: #ad0606;
+}
+
+.contacts {
+    margin-top: 10px;
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    
+}
+
+/* iFrame Container */
+iframe {
+    border-radius: 5%;
+}
+
+iframe:hover {
+    transition-duration: 0.5s;
+    filter:  blur(1px) brightness(80%);
+
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+.footer {
+    font-size: 8pt;
+    color: #169233;
+    background-color: #121212;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+
+    .gallery {
+        width: 55%;
+        height: 225px;
+        font-size: smaller;
+    }
+
+    iframe{
+        position: relative;
+        width: 32%;
+    }
+
+    #right-side {
+        background: #121212;
+    }
+
+    .profiles {
+        padding: 10px;
+        margin-top: 30px;
+        border: 2px solid #169233;
+        border-radius: 5%;
+    }
+
+    .profiles h2 {
+        color: #169233;
+    }
+    
+    .contacts {
+        background: #121212;
+        border: 0px;
+        color: #169233;
+    }
+
+    .footer {
+        font-size: 8pt;
+    }
+
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+
+    .gallery {
+        width: 35%;
+        height: 225px;
+        font-size: smaller;
+    }
+
+    iframe{
+        position: relative;
+        width: 32%;
+    }
+
+    #right-side {
+        background: #121212;
+        width: 100%;
+    }
+
+    .profiles,
+    .contacts {
+        justify-content: center;
+        width: 80%;
+
+    }
+
+    .profiles h2 {
+        color: #169233;
+    }
+
+}
